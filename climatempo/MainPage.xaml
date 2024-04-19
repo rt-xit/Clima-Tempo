@@ -81,7 +81,7 @@
 
      <Label Text="Chuva:"
             TextColor="Black"
-            FontSize="12"
+            FontSize="10"
             x:Name="LabelTempo"
             Grid.Row="0"
             Grid.Column="0"/>
@@ -95,7 +95,7 @@
 
      <Label Text="Humidade:"
             TextColor="Black"
-            FontSize="12"
+            FontSize="10"
             x:Name="ComoOTempoEsta"
             Grid.Row="1"
             Grid.Column="0"/>
@@ -107,8 +107,10 @@
             Grid.Row="1"
             Grid.Column="1"/>
       </Grid>
-<!-- ........................................FRAME DIA E NOITE................................................................-->
     </Frame>
+
+<!-- ........................................FRAME DIA E NOITE................................................................-->
+
       <Frame BorderColor="Black"
            Grid.Row="1"
            Grid.Column="2"
@@ -118,18 +120,18 @@
 
      <Grid>
           <Grid.RowDefinitions>
-          <RowDefinition Height="20"/>
+          <RowDefinition Height="25"/>
           <RowDefinition Height="*"/>
           <RowDefinition Height="*"/>
           </Grid.RowDefinitions>
           <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="81"/>
           <ColumnDefinition Width="45"/>
+          <ColumnDefinition Width="30"/>
           </Grid.ColumnDefinitions>
 
      <Label Text="Sol"
             TextColor="Black"
-            FontSize="10"
+            FontSize="12"
             HorizontalTextAlignment="Center"
             Grid.Row="0"
             Grid.Column="0"
@@ -137,37 +139,85 @@
                                    
      <Label Text="Amanhecer:"
             TextColor="Black"
-            FontSize="12"
+            FontSize="10"
             Grid.Row="1"
             Grid.Column="0"/> 
 
      <Label Text="06:01"
             TextColor="Black"
-            FontSize="5"
+            FontSize="10"
             Grid.Row="1"
             Grid.Column="1"/>
 
      <Label Text="Anoitecer:"
             TextColor="Black"
-            FontSize="12"
+            FontSize="10"
             Grid.Row="2"
             Grid.Column="0"/>
 
      <Label Text="18:02"
             TextColor="Black"
-            FontSize="5"
+            FontSize="10"
             Grid.Row="2"
             Grid.Column="1"/>
       </Grid>
     </Frame>
-<!-- .....................................FRAME CHUVA E HUMIDADE............................................................. -->
-    <Frame BorderColor="Black"
-           Grid.Row="2"
-           Grid.Column="1"
-           Margin="5"
-           BackgroundColor="#99E0E0E0"
-           CornerRadius="23">
-    </Frame>
+    
+<!-- .................................................FRAME VENTO............................................................. -->
+
+    <Frame x:Name="tres"
+       BackgroundColor="#77ffffff"
+       BorderColor="Transparent"
+       CornerRadius="35"
+        Grid.Row="2"
+       Grid.Column="1">
+  <Grid>
+       <Grid.RowDefinitions>
+       <RowDefinition Height="20"/>
+       <RowDefinition Height="*"/>
+       <RowDefinition Height="*"/>
+       </Grid.RowDefinitions>
+       <Grid.ColumnDefinitions>
+       <ColumnDefinition Width="81"/>
+       <ColumnDefinition Width="45"/>
+       </Grid.ColumnDefinitions>
+
+       <Label Text="Sol"
+              TextColor="Black"
+              FontSize="18"
+              HorizontalTextAlignment="Center"
+              Grid.Row="0"
+              Grid.Column="0"
+              Grid.ColumnSpan="2"/>
+                                   
+       <Label Text="Amanhecer:"
+              TextColor="Black"
+              FontSize="14"
+              Grid.Row="1"
+              Grid.Column="0"/> 
+
+       <Label TextColor="Black"
+              x:Name="LabelAmanhecer"
+              FontSize="14"
+              Grid.Row="1"
+              Grid.Column="1"/>
+
+       <Label Text="Anoitecer:"
+              TextColor="Black"
+              FontSize="14"
+              Grid.Row="2"
+              Grid.Column="0"/>
+
+       <Label TextColor="Black"
+              x:Name="LabelAnoitecer"
+              FontSize="14"
+              Grid.Row="2"
+              Grid.Column="1"/>
+  </Grid>
+</Frame>
+
+
+  <!-- .................................................FRAME NOVO............................................................. -->
 
     <Frame BorderColor="Black"
            Grid.Row="2"
@@ -186,4 +236,6 @@
            CornerRadius="40">
     </Frame>
   </Grid>
+
+  
 </ContentPage>
