@@ -132,6 +132,7 @@
      <Label Text="Vento"
             TextColor="Black"
             FontSize="14"
+            FontFamily="Chatlong.ttf"
             HorizontalTextAlignment="Center"
             Grid.Row="0"
             Grid.Column="0"
@@ -143,7 +144,7 @@
             Grid.Row="1"
             Grid.Column="0"/> 
 
-     <Label Text="06:01"
+     <Label Text="3"
             TextColor="Black"
             FontSize="10"
             Grid.Row="1"
@@ -155,7 +156,7 @@
             Grid.Row="2"
             Grid.Column="0"/>
 
-     <Label Text="18:02"
+     <Label Text="397 N"
             TextColor="Black"
             FontSize="10"
             Grid.Row="2"
@@ -173,38 +174,38 @@
        Grid.Column="1">
   <Grid>
        <Grid.RowDefinitions>
-       <RowDefinition Height="20"/>
+       <RowDefinition Height="*"/>
        <RowDefinition Height="*"/>
        <RowDefinition Height="*"/>
        </Grid.RowDefinitions>
        <Grid.ColumnDefinitions>
-       <ColumnDefinition Width="81"/>
-       <ColumnDefinition Width="45"/>
+       <ColumnDefinition Width="*"/>
+       <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
        </Grid.ColumnDefinitions>
 
        <Label Text="Sol"
               TextColor="Black"
               FontSize="14"
-              HorizontalTextAlignment="Center"
+              FontFamily="Chatlong.ttf"
               Grid.Row="0"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>
-                                   
+              Grid.Column="1"/>
+                                          
        <Label Text="Dia:"
               TextColor="Black"
-              FontSize="12"
+              FontSize="10"
               Grid.Row="1"
               Grid.Column="0"/> 
 
        <Label Text="06:01"
               TextColor="Black"
               FontSize="10"
-              Grid.Row="3"
+              Grid.Row="1"
               Grid.Column="1"/>
 
        <Label Text="Anoitecer:"
               TextColor="Black"
-              FontSize="12"
+              FontSize="10"
               Grid.Row="2"
               Grid.Column="0"/>
 
@@ -218,48 +219,45 @@
 </Frame>
 
 
-  <!-- .................................................FRAME NOVO............................................................. -->
+  <!-- ......................................................FRAME LUA................................................................................. -->
 
-       <Frame x:Name="cinco"
-              BackgroundColor="#99E0E0E0"
-              BorderColor="Black"
-              CornerRadius="35"
-              Grid.Row="2"
-              Grid.Column="2"
-              Padding="0">
+      
+    <Frame BorderColor="Black"
+           Grid.Row="2"
+           Grid.Column="2"
+           BackgroundColor="#99E0E0E0"
+           CornerRadius="23">
        <Grid>
               <Grid.RowDefinitions>
               <RowDefinition Height="*"/>
               <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
               </Grid.RowDefinitions>
               <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="50"/>
-              <ColumnDefinition Width="100"/>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
               </Grid.ColumnDefinitions>
                                    
        <Label Text="Lua"
               TextColor="Black"
               FontFamily="Chatlong.ttf"
-              FontSize="19"
+              FontSize="14"
               HorizontalTextAlignment="Center"  
               Grid.Row="0"
-              Grid.Column="0"
+              Grid.Column="1"
               Grid.ColumnSpan="2"/>
                                    
        <Label Text="Fase:"
               TextColor="Black"
-              FontFamily="Bond-story.ttf"
-              FontSize="14"
-              Margin="15, 0, 0, 10"
+              FontSize="12"
               Grid.Row="1"
               Grid.Column="0"/> 
 
-       <Label TextColor="Black"
-              x:Name="LabelFase"
-              FontFamily="Bond-story.ttf"
-              FontSize="14"
-               Margin="0, 0, 15, 10"
-              Grid.Row="1"
+        <Label Text="18:02"
+              TextColor="Black"
+              FontSize="10"
+              Grid.Row="2"
               Grid.Column="1"/>
 
       </Grid>
