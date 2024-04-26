@@ -1,4 +1,5 @@
-﻿namespace climatempo;
+﻿using System.Text.Json;
+namespace climatempo;
 
 public partial class MainPage : ContentPage
 {
@@ -10,12 +11,15 @@ public partial class MainPage : ContentPage
 		AtualizaTempo();
 	}
 
-	async void AtualizaTempo(){
-		try{
+	async void AtualizaTempo()
+	{
+		try
+		{
 			var HttpClient = new HttpClient();
 			var Response = await HttpClient.GetAsync(URL);
 
-			if(Response.IsSuccessStatusCode){
+			if(Response.IsSuccessStatusCode)
+			{
 				var Content = await Response.Content.ReadAsStringAsync();
 				resposta = JsonSerializer.Deserialize<Resposta>(Content);
 			}
@@ -30,18 +34,18 @@ public partial class MainPage : ContentPage
 	
 
 	void PreencherTela(){
-		LabelTemperatura.Text = resposta.results.temp + "ºC".ToString();
-		LabelHumidade.Text = resposta.results.humidity.ToString();
+		Temperatura.Text = resposta.results.temp + "ºC".ToString();
+		Humidade.Text = resposta.results.humidity.ToString();
 		
-		LabelForca.Text = resposta.results.wind_speedy.ToString();
-		LabelChuva.Text = resposta.results.rain.ToString();
+		Forca.Text = resposta.results.wind_speedy.ToString();
+		Chuva.Text = resposta.results.rain.ToString();
 		
-		LabelTempo.Text = resposta.results.description;
-		LabelDirecao.Text = resposta.results.wind_cardinal;
-		LabelFase.Text = resposta.results.moon_phase;
-		LabelHora.Text = resposta.results.time;
-		LabelAmanhecer.Text = resposta.results.sunrise;
-		LabelAnoitecer.Text = resposta.results.sunset;
+		Tempo.Text = resposta.results.description;
+		Direcao.Text = resposta.results.wind_cardinal;
+		Fase.Text = resposta.results.moon_phase;
+		Hora.Text = resposta.results.time;
+		Dia.Text = resposta.results.sunrise;
+		Noite.Text = resposta.results.sunset;
 
 		int temp = 31;
 		int sunrise = 0620;
@@ -62,25 +66,25 @@ public partial class MainPage : ContentPage
 
 		if(resposta.results.currently == "dia"){
 			if(resposta.results.rain > 10)
-			TelaDeFundo.Source = "dia_chuvoso.png";
+			chuva.Source = "chuva.png";
 		
 			else if(resposta.results.cloudiness > 20)
-				TelaDeFundo.Source = "dia_nublado.png";
+				chuva.Source = "nublado.png";
 
 			else
-				TelaDeFundo.Source = "dia_claro.png";
+				chuva.Source = "diaclaro.jpeg";
 		}
 		
 		else {
 			
 			if(resposta.results.rain > 10)
-			TelaDeFundo.Source = "noite_chuvosa.png";
+			Chuva.Source = "noitechuvosa.jpeg";
 		
 			else if(resposta.results.cloudiness > 20)
-				TelaDeFundo.Source = "noite_nublada.png";
+				Chuva.Source = "nublado.jpg";
 
 			else
-				TelaDeFundo.Source = "noite_clara.png";
+				Chuva.Source = "nublado.jpg";
 		}
 		
 	}

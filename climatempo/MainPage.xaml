@@ -21,7 +21,8 @@
 
 <!-- ............................................TELA DE FUNDO......................................................... -->
     
-     <Image Source="imagemdois.jpeg"
+     <Image Source="chuva.jpeg"
+            x:Name="Chuva"
             Aspect="AspectFill"
             Grid.Row="0"
             Grid.RowSpan="10"
@@ -43,7 +44,7 @@
      <Label Text="23 ºC"
             TextColor="Black"
             FontSize="35"
-            x:Name="LabelTemperatura"
+            x:Name="Temperatura"
             Margin="5,20"/>
 
      <Label Text="Tempo nublado"
@@ -82,7 +83,7 @@
      <Label Text="Chuva:"
             TextColor="Black"
             FontSize="12"
-            x:Name="LabelTempo"
+            x:Name="Chuva"
             Grid.Row="0"
             Grid.Column="0"/>
                                    
@@ -96,7 +97,7 @@
      <Label Text="Humidade:"
             TextColor="Black"
             FontSize="12"
-            x:Name="ComoOTempoEsta"
+            x:Name="Humidade"
             Grid.Row="1"
             Grid.Column="0"/>
 
@@ -140,6 +141,7 @@
                                    
      <Label Text="Força:"
             TextColor="Black"
+            x:Name="Forca"
             FontSize="12"
             Grid.Row="1"
             Grid.Column="0"/> 
@@ -150,8 +152,9 @@
             Grid.Row="1"
             Grid.Column="1"/>
 
-     <Label Text="Direção"
+     <Label Text="Direcao"
             TextColor="Black"
+            x:Name="Direcao"
             FontSize="12"
             Grid.Row="2"
             Grid.Column="0"/>
@@ -188,10 +191,12 @@
               TextColor="Black"
               FontSize="14"
               FontFamily="Chatlong.ttf"
+              x:Name="Tempo"
               Grid.Row="0"
               Grid.Column="1"/>
                                           
        <Label Text="Dia:"
+              x:Name="Dia"
               TextColor="Black"
               FontSize="10"
               Grid.Row="1"
@@ -199,12 +204,14 @@
 
        <Label Text="06:01"
               TextColor="Black"
+              x:Name="Hora"
               FontSize="10"
               Grid.Row="1"
               Grid.Column="1"/>
 
        <Label Text="Anoitecer:"
               TextColor="Black"
+              x:Name="Noite"
               FontSize="10"
               Grid.Row="2"
               Grid.Column="0"/>
@@ -250,6 +257,7 @@
                                    
        <Label Text="Fase:"
               TextColor="Black"
+              x:Name="Fase"
               FontSize="12"
               Grid.Row="1"
               Grid.Column="0"/> 
